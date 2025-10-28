@@ -38,10 +38,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnCadastroAlunos = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alunosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAlunos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gymSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gymSystemDataSet
@@ -78,7 +83,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 6);
+            this.label1.Location = new System.Drawing.Point(262, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 24);
             this.label1.TabIndex = 0;
@@ -96,7 +101,7 @@
             // 
             // btnCadastroAlunos
             // 
-            this.btnCadastroAlunos.Location = new System.Drawing.Point(93, 33);
+            this.btnCadastroAlunos.Location = new System.Drawing.Point(93, 141);
             this.btnCadastroAlunos.Name = "btnCadastroAlunos";
             this.btnCadastroAlunos.Size = new System.Drawing.Size(114, 23);
             this.btnCadastroAlunos.TabIndex = 2;
@@ -104,13 +109,47 @@
             this.btnCadastroAlunos.UseVisualStyleBackColor = true;
             this.btnCadastroAlunos.Click += new System.EventHandler(this.btnCadastroAlunos_Click);
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alunosToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip2.TabIndex = 5;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // alunosToolStripMenuItem
+            // 
+            this.alunosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroDeAlunosToolStripMenuItem,
+            this.alunosToolStripMenuItem1});
+            this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
+            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.alunosToolStripMenuItem.Text = "Alunos";
+            this.alunosToolStripMenuItem.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
+            // 
+            // cadastroDeAlunosToolStripMenuItem
+            // 
+            this.cadastroDeAlunosToolStripMenuItem.Name = "cadastroDeAlunosToolStripMenuItem";
+            this.cadastroDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.cadastroDeAlunosToolStripMenuItem.Text = "Cadastro de alunos";
+            // 
+            // alunosToolStripMenuItem1
+            // 
+            this.alunosToolStripMenuItem1.Name = "alunosToolStripMenuItem1";
+            this.alunosToolStripMenuItem1.Size = new System.Drawing.Size(175, 22);
+            this.alunosToolStripMenuItem1.Text = "Alunos";
+            // 
             // btnAlunos
             // 
-            this.btnAlunos.Location = new System.Drawing.Point(12, 33);
+            this.btnAlunos.FlatAppearance.BorderSize = 0;
+            this.btnAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlunos.Image = global::GymSystem.Properties.Resources.icons8_body_builder_601;
+            this.btnAlunos.Location = new System.Drawing.Point(0, 27);
             this.btnAlunos.Name = "btnAlunos";
-            this.btnAlunos.Size = new System.Drawing.Size(75, 23);
+            this.btnAlunos.Size = new System.Drawing.Size(36, 23);
             this.btnAlunos.TabIndex = 3;
-            this.btnAlunos.Text = "Alunos";
             this.btnAlunos.UseVisualStyleBackColor = true;
             // 
             // FrmPrincipal
@@ -122,12 +161,17 @@
             this.Controls.Add(this.btnCadastroAlunos);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip2);
+            this.IsMdiContainer = true;
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gymSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +189,9 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnCadastroAlunos;
         private System.Windows.Forms.Button btnAlunos;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastroDeAlunosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem1;
     }
 }

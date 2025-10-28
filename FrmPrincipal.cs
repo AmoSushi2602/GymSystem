@@ -28,10 +28,22 @@ namespace GymSystem
                 Application.Exit();
         }
         private void btnCadastroAlunos_Click(object sender, EventArgs e)
-        {
-            FrmCadastroAlunos form = new FrmCadastroAlunos();
-            form.ShowDialog();
+            {
+            foreach(Form form in this.MdiChildren)
+            {
+                if (form is FrmAlunos)
+                {
+                form.Activate();
+                    return;
+                }
+            }
+            
+            FrmAlunos frm = new FrmAlunos();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
+        
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
@@ -54,5 +66,24 @@ namespace GymSystem
         {
 
         }
+
+        private void alunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is FrmAlunos)
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+
+            FrmAlunos frm = new FrmAlunos();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }
+
