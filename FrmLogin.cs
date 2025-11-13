@@ -37,7 +37,7 @@ namespace GymSystem
                     MessageBox.Show("Login Bem-Sucedido!");
                     FrmPrincipal frm = new FrmPrincipal();
                     frm.Show();
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
