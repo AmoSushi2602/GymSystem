@@ -19,9 +19,11 @@ namespace GymSystem
             InitializeComponent();
         }
 
-        private void frmAlunos_Load(object sender, EventArgs e)
+        private void FrmAlunos_Load(object sender, EventArgs e)
         {
+            
             MostrarAlunos();
+
         }
         private void MostrarAlunos()
         {
@@ -32,7 +34,7 @@ namespace GymSystem
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                dgvAlunos.DataSource = dt;
+                DgvAlunos.DataSource = dt;
                 con.FecharConexao();
             }
             catch (Exception ex)
@@ -41,21 +43,21 @@ namespace GymSystem
             }
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        private void BtnAtualizar_Click(object sender, EventArgs e)
         {
             MostrarAlunos();
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void BtnExcluir_Click(object sender, EventArgs e)
         {
-            if (dgvAlunos.SelectedRows.Count == 0)
+            if (DgvAlunos.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um aluno para excluir!");
                 return;
             }
 
 
-            int id = Convert.ToInt32(dgvAlunos.SelectedRows[0].Cells["Id"].Value);
+            int id = Convert.ToInt32(DgvAlunos.SelectedRows[0].Cells["Id"].Value);
             var confirmar = MessageBox.Show("Deseja realmente excluir este aluno?",
                 "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -78,28 +80,27 @@ namespace GymSystem
                 }
             }
         }
-        private void btnEditar_Click(object sender, EventArgs e)
+    
+          private void DgvAlunos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvAlunos.SelectedRows.Count == 0)
+            if (e.RowIndex >= 0) // garante que clicou em uma linha válida
             {
-                MessageBox.Show("Selecione um aluno para editar!");
-                return;
+                if (DgvAlunos.CurrentRow != null)
+                {
+                    int id = Convert.ToInt32(DgvAlunos.Rows[e.RowIndex].Cells["Id"].Value);
+                    string nome = DgvAlunos.Rows[e.RowIndex].Cells["Nome"].Value.ToString();
+                    string cpf = DgvAlunos.Rows[e.RowIndex].Cells["CPF"].Value.ToString();
+                    string telefone = DgvAlunos.Rows[e.RowIndex].Cells["Telefone"].Value.ToString();
+
+                    // abre o formulário de edição e passa os dados
+                    FrmEditarAlunos frm = new FrmEditarAlunos(id, nome, cpf, telefone);
+                    frm.ShowDialog();
+
+                    // após fechar o form de edição, atualiza a lista
+                    MostrarAlunos();
+                }
             }
-            
-            int id = Convert.ToInt32(dgvAlunos.SelectedRows[0].Cells["Id"].Value);
-            string nome = dgvAlunos.SelectedRows[0].Cells["Nome"].Value.ToString();
-            string cpf = dgvAlunos.SelectedRows[0].Cells["CPF"].Value.ToString();
-            string telefone = dgvAlunos.SelectedRows[0].Cells["Telefone"].Value.ToString();
-
-            // Aqui você pode abrir a tela de edição
-            FrmAlunos frm = new FrmAlunos();
-            frm.txtNome.text = nome;
-            frm.txtCPF.Text = cpf;
-            frm.txtTelefone.Text = telefone;
-            frm.ShowDialog();
-
-            // Depois de editar, recarregar a lista
-            MostrarAlunos();
         }
-    }
+
+    }    
 }

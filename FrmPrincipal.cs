@@ -16,7 +16,7 @@ namespace GymSystem
         {
             InitializeComponent();
         }
-        private void btnSair_Click(object sender, EventArgs e)
+        private void BtnSair_Click(object sender, EventArgs e)
         {
             var resposta = MessageBox.Show(
                 "Deseja realmente sair do sistema?",
@@ -27,18 +27,18 @@ namespace GymSystem
             if (resposta == DialogResult.Yes)
                 Application.Exit();
         }
-        private void btnCadastroAlunos_Click(object sender, EventArgs e)
+        private void BtnCadastroAlunos_Click(object sender, EventArgs e)
             {
             foreach(Form form in this.MdiChildren)
             {
-                if (form is FrmAlunos)
+                if (form is FrmCadastroAlunos)
                 {
                 form.Activate();
                     return;
                 }
             }
             
-            FrmAlunos frm = new FrmAlunos();
+            FrmCadastroAlunos frm = new FrmCadastroAlunos();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
@@ -52,9 +52,15 @@ namespace GymSystem
             // TODO: esta linha de código carrega dados na tabela 'gymSystemDataSet.Usuarios'. Você pode movê-la ou removê-la conforme necessário.
             this.usuariosTableAdapter.Fill(this.gymSystemDataSet.Usuarios);
 
+            // define o wallpaper do sistema
+            this.BackgroundImage = Properties.Resources.fundo;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+
+            // cor base caso nao preencha toda a tela
+            this.BackColor = Color.Black;
         }
 
-        private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void UsuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.usuariosBindingSource.EndEdit();
@@ -62,12 +68,12 @@ namespace GymSystem
 
         }
 
-        private void usuariosBindingNavigator_RefreshItems(object sender, EventArgs e)
+        private void UsuariosBindingNavigator_RefreshItems(object sender, EventArgs e)
         {
 
         }
 
-        private void alunosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AlunosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
             {
