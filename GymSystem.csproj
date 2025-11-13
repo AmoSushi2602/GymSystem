@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="FrmEditarAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarAlunos.Designer.cs">
+      <DependentUpon>FrmEditarAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroAlunos.resx">
       <DependentUpon>FrmCadastroAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarAlunos.resx">
+      <DependentUpon>FrmEditarAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -130,6 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-body-builder-601.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_00000000afe8620eb4a798e51aa79270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_00000000467461f590dd8aded9c85441 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

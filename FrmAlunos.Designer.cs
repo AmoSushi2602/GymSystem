@@ -29,26 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvAlunos = new System.Windows.Forms.DataGridView();
+            this.DgvAlunos = new System.Windows.Forms.DataGridView();
             this.gymSystemDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gymSystemDataSet = new GymSystem.GymSystemDataSet();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymSystemDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymSystemDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvAlunos
+            // DgvAlunos
             // 
-            this.dgvAlunos.AutoGenerateColumns = false;
-            this.dgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlunos.DataSource = this.gymSystemDataSetBindingSource;
-            this.dgvAlunos.Location = new System.Drawing.Point(1, 99);
-            this.dgvAlunos.Name = "dgvAlunos";
-            this.dgvAlunos.Size = new System.Drawing.Size(240, 150);
-            this.dgvAlunos.TabIndex = 0;
+            this.DgvAlunos.AutoGenerateColumns = false;
+            this.DgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvAlunos.DataSource = this.gymSystemDataSetBindingSource;
+            this.DgvAlunos.Location = new System.Drawing.Point(1, 99);
+            this.DgvAlunos.Name = "DgvAlunos";
+            this.DgvAlunos.Size = new System.Drawing.Size(800, 150);
+            this.DgvAlunos.TabIndex = 0;
             // 
             // gymSystemDataSetBindingSource
             // 
@@ -59,15 +58,6 @@
             // 
             this.gymSystemDataSet.DataSetName = "GymSystemDataSet";
             this.gymSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(1, 72);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 21);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnExcluir
             // 
@@ -94,26 +84,26 @@
             this.ClientSize = new System.Drawing.Size(813, 450);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.dgvAlunos);
-            this.IsMdiContainer = true;
+            this.Controls.Add(this.DgvAlunos);
             this.Name = "FrmAlunos";
-            this.Text = "frmAlunos";
+            this.Text = "FrmAlunos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmAlunos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).EndInit();
+            this.Load += new System.EventHandler(this.FrmAlunos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAlunos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymSystemDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymSystemDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.DgvAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAlunos_CellDoubleClick);
+
+
 
         }
 
         #endregion
         private System.Windows.Forms.BindingSource gymSystemDataSetBindingSource;
         private GymSystemDataSet gymSystemDataSet;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtualizar;
-        private System.Windows.Forms.DataGridView dgvAlunos;
+        private System.Windows.Forms.DataGridView DgvAlunos;
     }
 }

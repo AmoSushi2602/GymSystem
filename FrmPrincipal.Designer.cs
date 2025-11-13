@@ -37,7 +37,6 @@
             this.alunosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
-            this.btnCadastroAlunos = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,23 +90,13 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(12, 415);
+            this.btnSair.Location = new System.Drawing.Point(725, 1);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 1;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // btnCadastroAlunos
-            // 
-            this.btnCadastroAlunos.Location = new System.Drawing.Point(93, 141);
-            this.btnCadastroAlunos.Name = "btnCadastroAlunos";
-            this.btnCadastroAlunos.Size = new System.Drawing.Size(114, 23);
-            this.btnCadastroAlunos.TabIndex = 2;
-            this.btnCadastroAlunos.Text = "Cadastro de Alunos";
-            this.btnCadastroAlunos.UseVisualStyleBackColor = true;
-            this.btnCadastroAlunos.Click += new System.EventHandler(this.btnCadastroAlunos_Click);
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // menuStrip2
             // 
@@ -127,19 +116,21 @@
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
             this.alunosToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.alunosToolStripMenuItem.Text = "Alunos";
-            this.alunosToolStripMenuItem.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
+            this.alunosToolStripMenuItem.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
             // 
             // cadastroDeAlunosToolStripMenuItem
             // 
             this.cadastroDeAlunosToolStripMenuItem.Name = "cadastroDeAlunosToolStripMenuItem";
             this.cadastroDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.cadastroDeAlunosToolStripMenuItem.Text = "Cadastro de alunos";
+            this.cadastroDeAlunosToolStripMenuItem.Click += new System.EventHandler(this.BtnCadastroAlunos_Click);
             // 
             // alunosToolStripMenuItem1
             // 
             this.alunosToolStripMenuItem1.Name = "alunosToolStripMenuItem1";
             this.alunosToolStripMenuItem1.Size = new System.Drawing.Size(175, 22);
             this.alunosToolStripMenuItem1.Text = "Alunos";
+            this.alunosToolStripMenuItem1.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
             // 
             // btnAlunos
             // 
@@ -151,14 +142,16 @@
             this.btnAlunos.Size = new System.Drawing.Size(36, 23);
             this.btnAlunos.TabIndex = 3;
             this.btnAlunos.UseVisualStyleBackColor = true;
+            this.btnAlunos.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.BackgroundImage = global::GymSystem.Properties.Resources.fundo;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAlunos);
-            this.Controls.Add(this.btnCadastroAlunos);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip2);
@@ -187,7 +180,6 @@
         private System.Windows.Forms.BindingSource alunosBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button btnCadastroAlunos;
         private System.Windows.Forms.Button btnAlunos;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem;
