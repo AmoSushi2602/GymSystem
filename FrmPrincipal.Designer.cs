@@ -116,19 +116,18 @@
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
             this.alunosToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.alunosToolStripMenuItem.Text = "Alunos";
-            this.alunosToolStripMenuItem.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
             // 
             // cadastroDeAlunosToolStripMenuItem
             // 
             this.cadastroDeAlunosToolStripMenuItem.Name = "cadastroDeAlunosToolStripMenuItem";
-            this.cadastroDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.cadastroDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastroDeAlunosToolStripMenuItem.Text = "Cadastro de alunos";
             this.cadastroDeAlunosToolStripMenuItem.Click += new System.EventHandler(this.BtnCadastroAlunos_Click);
             // 
             // alunosToolStripMenuItem1
             // 
             this.alunosToolStripMenuItem1.Name = "alunosToolStripMenuItem1";
-            this.alunosToolStripMenuItem1.Size = new System.Drawing.Size(175, 22);
+            this.alunosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.alunosToolStripMenuItem1.Text = "Alunos";
             this.alunosToolStripMenuItem1.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
             // 
