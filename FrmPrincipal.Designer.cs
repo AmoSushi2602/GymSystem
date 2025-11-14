@@ -35,7 +35,6 @@
             this.tableAdapterManager = new GymSystem.GymSystemDataSetTableAdapters.TableAdapterManager();
             this.alunosTableAdapter = new GymSystem.GymSystemDataSetTableAdapters.AlunosTableAdapter();
             this.alunosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,16 +78,6 @@
             // 
             this.alunosBindingSource.DataMember = "Alunos";
             this.alunosBindingSource.DataSource = this.gymSystemDataSet;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(262, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bem Vindo ao Sistema!";
             // 
             // btnSair
             // 
@@ -152,6 +141,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.ToolTipText = "Alunos";
             this.toolStripButton1.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
             // 
             // FrmPrincipal
@@ -163,7 +153,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip2);
             this.IsMdiContainer = true;
             this.Name = "FrmPrincipal";
@@ -190,7 +179,6 @@
         private GymSystemDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private GymSystemDataSetTableAdapters.AlunosTableAdapter alunosTableAdapter;
         private System.Windows.Forms.BindingSource alunosBindingSource;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem;
