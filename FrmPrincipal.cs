@@ -43,20 +43,30 @@ namespace GymSystem
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
-        
+
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'gymSystemDataSet.Alunos'. Você pode movê-la ou removê-la conforme necessário.
-            this.alunosTableAdapter.Fill(this.gymSystemDataSet.Alunos);
-            // TODO: esta linha de código carrega dados na tabela 'gymSystemDataSet.Usuarios'. Você pode movê-la ou removê-la conforme necessário.
-            this.usuariosTableAdapter.Fill(this.gymSystemDataSet.Usuarios);
+            try
+            {
+                // 1 - Desabilita constraints do DataSet inteiro
+                this.gymSystemDataSet.EnforceConstraints = false;
 
-            // define o wallpaper do sistema
+                // 2 - Carrega as tabelas NA ORDEM CORRETA
+                this.usuariosTableAdapter.Fill(this.gymSystemDataSet.Usuarios);
+                this.alunosTableAdapter.Fill(this.gymSystemDataSet.Alunos);
+
+                // 3 - Reativa constraints (vai disparar erro se houver algo inconsistente)
+                this.gymSystemDataSet.EnforceConstraints = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar DataSet:\n\n" + ex);
+            }
+
+            // wallpaper e layout
             this.BackgroundImage = Properties.Resources.fundo;
             this.BackgroundImageLayout = ImageLayout.Stretch;
-
-            // cor base caso nao preencha toda a tela
             this.BackColor = Color.Black;
         }
 
@@ -89,6 +99,16 @@ namespace GymSystem
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

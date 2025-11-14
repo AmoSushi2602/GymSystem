@@ -41,13 +41,13 @@
             // 
             // DgvAlunos
             // 
-            this.DgvAlunos.AutoGenerateColumns = false;
             this.DgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvAlunos.DataSource = this.gymSystemDataSetBindingSource;
             this.DgvAlunos.Location = new System.Drawing.Point(1, 99);
             this.DgvAlunos.Name = "DgvAlunos";
             this.DgvAlunos.Size = new System.Drawing.Size(800, 150);
             this.DgvAlunos.TabIndex = 0;
+            this.DgvAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAlunos_CellDoubleClick);
+            this.DgvAlunos.AutoGenerateColumns = true;
             // 
             // gymSystemDataSetBindingSource
             // 
@@ -93,9 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gymSystemDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymSystemDataSet)).EndInit();
             this.ResumeLayout(false);
-            this.DgvAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAlunos_CellDoubleClick);
-
-
 
         }
 
@@ -105,5 +102,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.DataGridView DgvAlunos;
+
     }
 }

@@ -41,11 +41,13 @@
             this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alunosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAlunos = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.gymSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).BeginInit();
             this.menuStrip2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gymSystemDataSet
@@ -116,7 +118,6 @@
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
             this.alunosToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.alunosToolStripMenuItem.Text = "Alunos";
-            this.alunosToolStripMenuItem.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
             // 
             // cadastroDeAlunosToolStripMenuItem
             // 
@@ -132,17 +133,26 @@
             this.alunosToolStripMenuItem1.Text = "Alunos";
             this.alunosToolStripMenuItem1.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
             // 
-            // btnAlunos
+            // toolStrip1
             // 
-            this.btnAlunos.FlatAppearance.BorderSize = 0;
-            this.btnAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlunos.Image = global::GymSystem.Properties.Resources.icons8_body_builder_601;
-            this.btnAlunos.Location = new System.Drawing.Point(0, 27);
-            this.btnAlunos.Name = "btnAlunos";
-            this.btnAlunos.Size = new System.Drawing.Size(36, 23);
-            this.btnAlunos.TabIndex = 3;
-            this.btnAlunos.UseVisualStyleBackColor = true;
-            this.btnAlunos.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked_1);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::GymSystem.Properties.Resources.icons8_body_builder_601;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.AlunosToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -151,7 +161,7 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.BackgroundImage = global::GymSystem.Properties.Resources.fundo;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAlunos);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip2);
@@ -165,6 +175,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,10 +192,11 @@
         private System.Windows.Forms.BindingSource alunosBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button btnAlunos;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeAlunosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
